@@ -13,6 +13,9 @@
         android:layout_marginTop="90dp"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="30sp"
         android:background="#CEC9C9"/>
 
     <GridLayout
@@ -26,8 +29,8 @@
 
 <!--        row 1-->
         <Button android:id="@+id/rem" android:text="%" android:background="@drawable/ic_btn"/>
-        <Button android:id="@+id/expo" android:text="X^2"/>
-        <Button android:id="@+id/bckspc" android:text="👈"/>
+        <Button android:id="@+id/expo" android:text="^"/>
+        <Button android:id="@+id/bckspc" android:text="⌫"/>
         <Button android:id="@+id/clr" android:text="CE"/>
 <!--row 2-->
         <Button android:id="@+id/btn1" android:text="1"/>
