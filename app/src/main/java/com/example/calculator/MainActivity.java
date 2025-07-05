@@ -20,8 +20,7 @@ public class MainActivity extends AppCompatActivity {
     String input="";
     String operator="";
     double firstNum=0;
-    double secondNum=0;
-    double result=0;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -54,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
                         input = "";
                         operator = "";
                         firstNum = 0;
-                        secondNum=0;
                         display.setText("0");
                         break;
 
@@ -78,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     case "/":
                         operator = value;
                         firstNum = Double.parseDouble(input);
-                        secondNum= Double.parseDouble(input);
+
                         input = "";
                         break;
 
@@ -110,8 +108,9 @@ public class MainActivity extends AppCompatActivity {
                                     result = Math.pow(firstNum,secondNum);
                                     break;
                                 case "/":
-                                    if (secondNum  == (int) 0) {
+                                    if (secondNum==0) {
                                         display.setText("Error");
+                                        return;
                                     } else {
                                         result = firstNum / secondNum;
                                     }
@@ -119,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                             display.setText(String.valueOf(firstNum+" "+operator+" "+secondNum+"\n"+result));
                             input = String.valueOf(result);
+
                             operator = "";
                         }
                         break;
