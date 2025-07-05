@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Button b=(Button) view;
                 String value= b.getText().toString();
+
+//                comment added in the MainActivity;
 //                Switch(value){
 //                    case
 //                }
